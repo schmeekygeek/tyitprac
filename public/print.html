@@ -3,7 +3,8 @@
     <head>
         <!-- Book generated using mdBook -->
         <meta charset="UTF-8">
-        <title>Building a simple calculator - TYIT - Practicals</title>
+        <title>TYIT - Practicals</title>
+        <meta name="robots" content="noindex" />
 
 
         <!-- Custom HTML head -->
@@ -12,21 +13,21 @@
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <meta name="theme-color" content="#ffffff" />
 
-        <link rel="icon" href="../favicon.svg">
-        <link rel="shortcut icon" href="../favicon.png">
-        <link rel="stylesheet" href="../css/variables.css">
-        <link rel="stylesheet" href="../css/general.css">
-        <link rel="stylesheet" href="../css/chrome.css">
-        <link rel="stylesheet" href="../css/print.css" media="print">
+        <link rel="icon" href="favicon.svg">
+        <link rel="shortcut icon" href="favicon.png">
+        <link rel="stylesheet" href="css/variables.css">
+        <link rel="stylesheet" href="css/general.css">
+        <link rel="stylesheet" href="css/chrome.css">
+        <link rel="stylesheet" href="css/print.css" media="print">
 
         <!-- Fonts -->
-        <link rel="stylesheet" href="../FontAwesome/css/font-awesome.css">
-        <link rel="stylesheet" href="../fonts/fonts.css">
+        <link rel="stylesheet" href="FontAwesome/css/font-awesome.css">
+        <link rel="stylesheet" href="fonts/fonts.css">
 
         <!-- Highlight.js Stylesheets -->
-        <link rel="stylesheet" href="../highlight.css">
-        <link rel="stylesheet" href="../tomorrow-night.css">
-        <link rel="stylesheet" href="../ayu-highlight.css">
+        <link rel="stylesheet" href="highlight.css">
+        <link rel="stylesheet" href="tomorrow-night.css">
+        <link rel="stylesheet" href="ayu-highlight.css">
 
         <!-- Custom theme stylesheets -->
 
@@ -37,7 +38,7 @@
     <div id="body-container">
         <!-- Provide site root to javascript -->
         <script>
-            var path_to_root = "../";
+            var path_to_root = "";
             var default_theme = window.matchMedia("(prefers-color-scheme: dark)").matches ? "navy" : "light";
         </script>
 
@@ -85,7 +86,7 @@
 
         <nav id="sidebar" class="sidebar" aria-label="Table of contents">
             <div class="sidebar-scrollbox">
-                <ol class="chapter"><li class="chapter-item expanded affix "><a href="../introduction.html">Introduction</a></li><li class="chapter-item expanded "><div><strong aria-hidden="true">1.</strong> Enterprise Java</div></li><li><ol class="section"><li class="chapter-item expanded "><a href="../ej/practical1.html" class="active"><strong aria-hidden="true">1.1.</strong> Building a simple calculator</a></li></ol></li></ol>
+                <ol class="chapter"><li class="chapter-item expanded affix "><a href="introduction.html">Introduction</a></li><li class="chapter-item expanded "><div><strong aria-hidden="true">1.</strong> Enterprise Java</div></li><li><ol class="section"><li class="chapter-item expanded "><a href="ej/practical1.html"><strong aria-hidden="true">1.1.</strong> Building a simple calculator</a></li></ol></li></ol>
             </div>
             <div id="sidebar-resize-handle" class="sidebar-resize-handle"></div>
         </nav>
@@ -117,7 +118,7 @@
                     <h1 class="menu-title">TYIT - Practicals</h1>
 
                     <div class="right-buttons">
-                        <a href="../print.html" title="Print this book" aria-label="Print this book">
+                        <a href="print.html" title="Print this book" aria-label="Print this book">
                             <i id="print-button" class="fa fa-print"></i>
                         </a>
                         <a href="https://github.com/schmeekygeek/tyitprac" title="Git repository" aria-label="Git repository">
@@ -149,7 +150,14 @@
 
                 <div id="content" class="content">
                     <main>
-                        <ul>
+                        <h1 id="philosophy"><a class="header" href="#philosophy">Philosophy</a></h1>
+<p>Are you tired of creating or begging for practical journals from everyone, modifying it, and pretending you did all the work like a politician?</p>
+<p>If yes, then this site is for you. Simply print the chapter or practical you want, add your roll number, and <em>Voila!</em>, You're done</p>
+<h1 id="support"><a class="header" href="#support">Support</a></h1>
+<p><img src="https://media.giphy.com/media/CT5Ye7uVJLFtu/200.gif" alt="" /></p>
+<p>If you want to support me on what I do, the least you can do is star <a href="https://github.com/schmeekygeek/tyitprac">this repository</a> on GitHub. Plis.</p>
+<p><em>Built using <a href="https://github.com/rust-lang/mdBook/">mdbook</a>, content files written in MarkDown</em></p>
+<div style="break-before: page; page-break-before: always;"></div><ul>
 <li>Roll number: </li>
 <li>Name:</li>
 </ul>
@@ -185,7 +193,7 @@
     &lt;/body&gt;
 &lt;/html&gt;
 </code></pre>
-<p><img src="p1.1.jpg" alt="" /></p>
+<p><img src="ej/p1.1.jpg" alt="" /></p>
 <ul>
 <li>Create a new Servlet “Calculator.java” in the default source package
 <em>Calculator.java</em></li>
@@ -238,15 +246,12 @@ public class Calculator extends HttpServlet {
 <li>Go to http://localhost:8080/TYIT/index.html</li>
 <li>Enter any number in number 1 and number 2, select any operator like add, Hit submit, you’ll be taken to this screen</li>
 </ul>
-<p><img src="p1.2.jpg" alt="" /></p>
+<p><img src="ej/p1.2.jpg" alt="" /></p>
 
                     </main>
 
                     <nav class="nav-wrapper" aria-label="Page navigation">
                         <!-- Mobile navigation buttons -->
-                            <a rel="prev" href="../introduction.html" class="mobile-nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
-                                <i class="fa fa-angle-left"></i>
-                            </a>
 
 
                         <div style="clear: both"></div>
@@ -255,30 +260,11 @@ public class Calculator extends HttpServlet {
             </div>
 
             <nav class="nav-wide-wrapper" aria-label="Page navigation">
-                    <a rel="prev" href="../introduction.html" class="nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
-                        <i class="fa fa-angle-left"></i>
-                    </a>
 
             </nav>
 
         </div>
 
-        <!-- Livereload script (if served using the cli tool) -->
-        <script>
-            const wsProtocol = location.protocol === 'https:' ? 'wss:' : 'ws:';
-            const wsAddress = wsProtocol + "//" + location.host + "/" + "__livereload";
-            const socket = new WebSocket(wsAddress);
-            socket.onmessage = function (event) {
-                if (event.data === "reload") {
-                    socket.close();
-                    location.reload();
-                }
-            };
-
-            window.onbeforeunload = function() {
-                socket.close();
-            }
-        </script>
 
 
 
@@ -287,16 +273,23 @@ public class Calculator extends HttpServlet {
         </script>
 
 
-        <script src="../elasticlunr.min.js"></script>
-        <script src="../mark.min.js"></script>
-        <script src="../searcher.js"></script>
+        <script src="elasticlunr.min.js"></script>
+        <script src="mark.min.js"></script>
+        <script src="searcher.js"></script>
 
-        <script src="../clipboard.min.js"></script>
-        <script src="../highlight.js"></script>
-        <script src="../book.js"></script>
+        <script src="clipboard.min.js"></script>
+        <script src="highlight.js"></script>
+        <script src="book.js"></script>
 
         <!-- Custom JS scripts -->
 
+        <script>
+        window.addEventListener('load', function() {
+            MathJax.Hub.Register.StartupHook('End', function() {
+                window.setTimeout(window.print, 100);
+            });
+        });
+        </script>
 
     </div>
     </body>

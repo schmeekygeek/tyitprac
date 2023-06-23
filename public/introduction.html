@@ -3,8 +3,7 @@
     <head>
         <!-- Book generated using mdBook -->
         <meta charset="UTF-8">
-        <title>Page not found - TYIT - Practicals</title>
-        <base href="/">
+        <title>Introduction - TYIT - Practicals</title>
 
 
         <!-- Custom HTML head -->
@@ -86,7 +85,7 @@
 
         <nav id="sidebar" class="sidebar" aria-label="Table of contents">
             <div class="sidebar-scrollbox">
-                <ol class="chapter"><li class="chapter-item expanded affix "><a href="introduction.html">Introduction</a></li><li class="chapter-item expanded "><div><strong aria-hidden="true">1.</strong> Enterprise Java</div></li><li><ol class="section"><li class="chapter-item expanded "><a href="ej/practical1.html"><strong aria-hidden="true">1.1.</strong> Building a simple calculator</a></li></ol></li></ol>
+                <ol class="chapter"><li class="chapter-item expanded affix "><a href="introduction.html" class="active">Introduction</a></li><li class="chapter-item expanded "><div><strong aria-hidden="true">1.</strong> Enterprise Java</div></li><li><ol class="section"><li class="chapter-item expanded "><a href="ej/practical1.html"><strong aria-hidden="true">1.1.</strong> Building a simple calculator</a></li></ol></li></ol>
             </div>
             <div id="sidebar-resize-handle" class="sidebar-resize-handle"></div>
         </nav>
@@ -150,14 +149,22 @@
 
                 <div id="content" class="content">
                     <main>
-                        <h1 id="document-not-found-404"><a class="header" href="#document-not-found-404">Document not found (404)</a></h1>
-<p>This URL is invalid, sorry. Please use the navigation bar or search to continue.</p>
+                        <h1 id="philosophy"><a class="header" href="#philosophy">Philosophy</a></h1>
+<p>Are you tired of creating or begging for practical journals from everyone, modifying it, and pretending you did all the work like a politician?</p>
+<p>If yes, then this site is for you. Simply print the chapter or practical you want, add your roll number, and <em>Voila!</em>, You're done</p>
+<h1 id="support"><a class="header" href="#support">Support</a></h1>
+<p><img src="https://media.giphy.com/media/CT5Ye7uVJLFtu/200.gif" alt="" /></p>
+<p>If you want to support me on what I do, the least you can do is star <a href="https://github.com/schmeekygeek/tyitprac">this repository</a> on GitHub. Plis.</p>
+<p><em>Built using <a href="https://github.com/rust-lang/mdBook/">mdbook</a>, content files written in MarkDown</em></p>
 
                     </main>
 
                     <nav class="nav-wrapper" aria-label="Page navigation">
                         <!-- Mobile navigation buttons -->
 
+                            <a rel="next" href="ej/practical1.html" class="mobile-nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                                <i class="fa fa-angle-right"></i>
+                            </a>
 
                         <div style="clear: both"></div>
                     </nav>
@@ -166,26 +173,13 @@
 
             <nav class="nav-wide-wrapper" aria-label="Page navigation">
 
+                    <a rel="next" href="ej/practical1.html" class="nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                        <i class="fa fa-angle-right"></i>
+                    </a>
             </nav>
 
         </div>
 
-        <!-- Livereload script (if served using the cli tool) -->
-        <script>
-            const wsProtocol = location.protocol === 'https:' ? 'wss:' : 'ws:';
-            const wsAddress = wsProtocol + "//" + location.host + "/" + "__livereload";
-            const socket = new WebSocket(wsAddress);
-            socket.onmessage = function (event) {
-                if (event.data === "reload") {
-                    socket.close();
-                    location.reload();
-                }
-            };
-
-            window.onbeforeunload = function() {
-                socket.close();
-            }
-        </script>
 
 
 
