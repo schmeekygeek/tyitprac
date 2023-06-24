@@ -6,6 +6,6 @@ If yes, then this site is for you. Simply print the chapter or practical you wan
 # Support
 ![](https://media.giphy.com/media/CT5Ye7uVJLFtu/200.gif)
 
-If you want to support me on what I do, the least you can do is star [this repository](https://github.com/schmeekygeek/tyitprac) on GitHub. Plis.
+If you want to support my work, the least you can do is star [the repository](https://github.com/schmeekygeek/tyitprac) on GitHub. Plis.
 
 *Built using [mdbook](https://github.com/rust-lang/mdBook/), content files written in MarkDown*
