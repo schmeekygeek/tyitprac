@@ -86,7 +86,7 @@
 
         <nav id="sidebar" class="sidebar" aria-label="Table of contents">
             <div class="sidebar-scrollbox">
-                <ol class="chapter"><li class="chapter-item expanded affix "><a href="introduction.html">Introduction</a></li><li class="chapter-item expanded "><div><strong aria-hidden="true">1.</strong> Enterprise Java</div></li><li><ol class="section"><li class="chapter-item expanded "><a href="ej/practical1.html"><strong aria-hidden="true">1.1.</strong> Building a simple calculator</a></li></ol></li></ol>
+                <ol class="chapter"><li class="chapter-item expanded affix "><a href="introduction.html">Introduction</a></li><li class="chapter-item expanded "><div><strong aria-hidden="true">1.</strong> Enterprise Java</div></li><li><ol class="section"><li class="chapter-item expanded "><a href="ej/practical1.html"><strong aria-hidden="true">1.1.</strong> Building a simple calculator</a></li><li class="chapter-item expanded "><a href="ej/practical2.html"><strong aria-hidden="true">1.2.</strong> Building a simple login form</a></li></ol></li></ol>
             </div>
             <div id="sidebar-resize-handle" class="sidebar-resize-handle"></div>
         </nav>
@@ -170,27 +170,28 @@
 <li>Click Next and Finish (do not add any frameworks)</li>
 </ul>
 <p><em>index.html</em></p>
-<pre><code class="language-html">&lt;!DOCTYPE html&gt;
+<pre><code class="language-html">
+&lt;!DOCTYPE html&gt;
 &lt;html&gt;
-    &lt;head&gt;
-        &lt;title&gt;calculator&lt;/title&gt;
-    &lt;/head&gt;
-    &lt;body&gt;
-        &lt;form action='Calculator' method='get'&gt;
-            First No. &lt;input type=&quot;text&quot; name=&quot;t1&quot;&gt;&lt;br&gt;
-            Second No. &lt;input type=&quot;text&quot; name=&quot;t2&quot;&gt;&lt;br&gt;
-            
-            &lt;select id=&quot;drop&quot; name='t3'&gt;
-                &lt;option value=&quot;1&quot;&gt;add&lt;/option&gt;
-                &lt;option value=&quot;2&quot;&gt;sub&lt;/option&gt;
-                &lt;option value=&quot;3&quot;&gt;div&lt;/option&gt;
-                &lt;option value=&quot;4&quot;&gt;multi&lt;/option&gt;
-            &lt;/select&gt;
-            
-            &lt;input type='submit' value=&quot;submit&quot;&gt;
-            
-        &lt;/form&gt;
-    &lt;/body&gt;
+  &lt;head&gt;
+    &lt;title&gt;calculator&lt;/title&gt;
+  &lt;/head&gt;
+  &lt;body&gt;
+    &lt;form action='Calculator' method='get'&gt;
+      First No. &lt;input type=&quot;text&quot; name=&quot;t1&quot;&gt;&lt;br&gt;
+      Second No. &lt;input type=&quot;text&quot; name=&quot;t2&quot;&gt;&lt;br&gt;
+
+      &lt;select id=&quot;drop&quot; name='t3'&gt;
+        &lt;option value=&quot;1&quot;&gt;add&lt;/option&gt;
+        &lt;option value=&quot;2&quot;&gt;sub&lt;/option&gt;
+        &lt;option value=&quot;3&quot;&gt;div&lt;/option&gt;
+        &lt;option value=&quot;4&quot;&gt;multi&lt;/option&gt;
+      &lt;/select&gt;
+
+      &lt;input type='submit' value=&quot;submit&quot;&gt;
+
+    &lt;/form&gt;
+  &lt;/body&gt;
 &lt;/html&gt;
 </code></pre>
 <p><img src="ej/p1.1.jpg" alt="" /></p>
@@ -247,6 +248,75 @@ public class Calculator extends HttpServlet {
 <li>Enter any number in number 1 and number 2, select any operator like add, Hit submit, you’ll be taken to this screen</li>
 </ul>
 <p><img src="ej/p1.2.jpg" alt="" /></p>
+<div style="break-before: page; page-break-before: always;"></div><ul>
+<li>Roll number: </li>
+<li>Name:</li>
+</ul>
+<h1 id="practical-2---building-a-simple-login-form"><a class="header" href="#practical-2---building-a-simple-login-form">Practical 2 - Building a simple login form</a></h1>
+<ul>
+<li>Create a new Java Web application in Netbeans IDE</li>
+<li>Name the application to something like “TYIT”</li>
+<li>Click Next</li>
+<li>Select Glassfish server</li>
+<li>Click Next and Finish (do not add any frameworks)</li>
+</ul>
+<p><em>index.html</em></p>
+<pre><code class="language-html">&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+  &lt;head&gt;
+    &lt;title&gt;login form&lt;/title&gt;
+  &lt;/head&gt;
+  &lt;body&gt;
+    &lt;form action=&quot;NewServlet&quot; method=&quot;get&quot;&gt;
+      Username &lt;input type=&quot;text&quot; name=&quot;u&quot;&gt;&lt;br&gt;
+      Password &lt;input type=&quot;text&quot; name=&quot;p&quot;&gt;&lt;br&gt;     
+
+      &lt;input type=&quot;submit&quot; value=&quot;submit&quot;&gt;
+
+    &lt;/form&gt;
+  &lt;/body&gt;
+&lt;/html&gt;
+</code></pre>
+<p><img src="ej/p2.1.jpg" alt="" /></p>
+<ul>
+<li>Create a new Servlet “NewServlet.java” in the default source package
+<em>NewServlet.java</em></li>
+</ul>
+<pre><code class="language-java">@WebServlet(urlPatterns = {&quot;/NewServlet&quot;})
+public class NewServlet extends HttpServlet {
+
+    protected void processRequest(HttpServletRequest request, HttpServletResponse response)
+            throws ServletException, IOException {
+        response.setContentType(&quot;text/html;charset=UTF-8&quot;);
+        try (PrintWriter out = response.getWriter()) {
+            /* TODO output your page here. You may use following sample code. */
+            out.println(&quot;&lt;!DOCTYPE html&gt;&quot;);
+            out.println(&quot;&lt;html&gt;&quot;);
+            out.println(&quot;&lt;head&gt;&quot;);
+            out.println(&quot;&lt;title&gt;Servlet NewServlet&lt;/title&gt;&quot;);            
+            out.println(&quot;&lt;/head&gt;&quot;);
+            out.println(&quot;&lt;body&gt;&quot;);
+            String user = request.getParameter(&quot;u&quot;);
+            String pass = request.getParameter(&quot;p&quot;);
+            if (pass.equalsIgnoreCase(&quot;sys&quot;))
+                out.println(&quot;&lt;h1&gt;Hello &quot;+user+&quot;&lt;/h1&gt;&quot;);
+            else
+            out.println(&quot;&lt;h1&gt;login failed&lt;/h1&gt;&quot;);
+            out.println(&quot;&lt;/body&gt;&quot;);
+            out.println(&quot;&lt;/html&gt;&quot;);
+        }
+    }
+}
+</code></pre>
+<p>This is to be created in the default source package</p>
+<ul>
+<li>Save all files and then right click the java file and select “Run file”</li>
+<li>You will be taken to the browser</li>
+<li>Enter any username and password</li>
+<li>Click login</li>
+</ul>
+<p><em>Output</em></p>
+<p><img src="ej/p2.2.jpg" alt="" /></p>
 
                     </main>
 
@@ -265,22 +335,6 @@ public class Calculator extends HttpServlet {
 
         </div>
 
-        <!-- Livereload script (if served using the cli tool) -->
-        <script>
-            const wsProtocol = location.protocol === 'https:' ? 'wss:' : 'ws:';
-            const wsAddress = wsProtocol + "//" + location.host + "/" + "__livereload";
-            const socket = new WebSocket(wsAddress);
-            socket.onmessage = function (event) {
-                if (event.data === "reload") {
-                    socket.close();
-                    location.reload();
-                }
-            };
-
-            window.onbeforeunload = function() {
-                socket.close();
-            }
-        </script>
 
 
 
